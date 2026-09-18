@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ⚠️ Meta Pixel Code यहाँ Paste करो (अपने Pixel ID के साथ) -->
+<!-- End Meta Pixel Code -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TRADING WITH KAROL OFFICIAL</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+html,body{
+min-height:100vh;
+overflow-x:hidden;
+}
+
+body{
+background:#04060d;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px 12px;
+position:relative;
+}
+
+/* ============================================ */
+/* ===== BACKGROUND ===== */
+/* ============================================ */
+
+.bg-base{
+position:fixed;
+inset:0;
+z-index:0;
+background:
+radial-gradient(ellipse at 20% 10%, rgba(34,197,94,0.15) 0%, transparent 45%),
+radial-gradient(ellipse at 80% 90%, rgba(56,189,248,0.15) 0%, transparent 45%),
+radial-gradient(ellipse at 50% 50%, rgba(15,23,42,0.8) 0%, transparent 70%),
+linear-gradient(180deg, #04060d 0%, #0a1020 100%);
+}
+
+/* Animated Orbs */
+.orb{
+position:fixed;
+border-radius:50%;
+filter:blur(100px);
+opacity:0.4;
+z-index:0;
+pointer-events:none;
+animation:orbFloat 18s ease-in-out infinite;
+}
+
+.orb-1{width:340px;height:340px;background:#22c55e;top:-100px;left:-100px;animation-delay:0s;}
+.orb-2{width:300px;height:300px;background:#38bdf8;bottom:-100px;right:-80px;animation-delay:-6s;}
+.orb-3{width:260px;height:260px;background:#a855f7;top:40%;right:-80px;animation-delay:-12s;}
+
+@keyframes orbFloat{
+0%,100%{transform:translate(0,0) scale(1);}
+33%{transform:translate(30px,-40px) scale(1.1);}
+66%{transform:translate(-30px,40px) scale(0.95);}
+}
+
+/* Grid Overlay */
+.bg-grid{
+position:fixed;
+inset:0;
+z-index:0;
+background-image:
+linear-gradient(rgba(34,197,94,0.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(34,197,94,0.05) 1px, transparent 1px);
+background-size:50px 50px;
+mask-image:radial-gradient(ellipse at center, #000 20%, transparent 70%);
+-webkit-mask-image:radial-gradient(ellipse at center, #000 20%, transparent 70%);
+pointer-events:none;
+}
+
+/* ============================================ */
+/* ===== MAIN CARD ===== */
+/* ============================================ */
+
+.container{
+position:relative;
+z-index:2;
+width:100%;
+max-width:430px;
+padding:26px 22px 22px;
+border-radius:24px;
+background:rgba(15,23,42,0.7);
+backdrop-filter:blur(24px);
+-webkit-backdrop-filter:blur(24px);
+border:1px solid rgba(34,197,94,0.15);
+box-shadow:
+0 40px 100px rgba(0,0,0,0.8),
+0 0 80px rgba(34,197,94,0.08),
+0 0 0 1px rgba(255,255,255,0.03) inset;
+text-align:center;
+}
+
+/* Top Bar */
+.top-bar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:18px;
+padding-bottom:14px;
+border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.verified-pill{
+display:inline-flex;
+align-items:center;
+gap:5px;
+padding:4px 10px;
+background:rgba(34,197,94,0.1);
+border:1px solid rgba(34,197,94,0.3);
+border-radius:30px;
+font-size:9px;
+font-weight:800;
+color:#4ade80;
+letter-spacing:1.2px;
+text-transform:uppercase;
+}
+
+.verified-pill .check{
+width:12px;
+height:12px;
+border-radius:50%;
+background:#22c55e;
+color:#04060d;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+font-size:8px;
+font-weight:900;
+}
+
+.live-tag{
+display:inline-flex;
+align-items:center;
+gap:5px;
+font-family:'JetBrains Mono',monospace;
+font-size:9px;
+font-weight:700;
+color:#fbbf24;
+letter-spacing:1.2px;
+}
+
+.live-dot{
+width:6px;
+height:6px;
+border-radius:50%;
+background:#fbbf24;
+box-shadow:0 0 10px #fbbf24;
+animation:blink 1.2s infinite;
+}
+
+@keyframes blink{
+0%,100%{opacity:1;}
+50%{opacity:0.3;}
+}
+
+/* ===== AVATAR ===== */
+.avatar-wrap{
+position:relative;
+width:96px;
+height:96px;
+margin:0 auto 18px;
+}
+
+.avatar-wrap img{
+width:100%;
+height:100%;
+border-radius:50%;
+object-fit:cover;
+position:relative;
+z-index:2;
+border:3px solid rgba(15,23,42,1);
+box-shadow:
+0 0 0 1px rgba(34,197,94,0.4),
+0 0 30px rgba(34,197,94,0.35);
+}
+
+.avatar-wrap::before{
+content:'';
+position:absolute;
+inset:-6px;
+border-radius:50%;
+background:conic-gradient(from 0deg, #22c55e, #38bdf8, #a855f7, #22c55e);
+animation:spin 5s linear infinite;
+z-index:1;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+/* ===== CHANNEL NAME ===== */
+.channel-name{
+font-size:17px;
+font-weight:900;
+color:#fff;
+line-height:1.35;
+letter-spacing:-0.2px;
+margin-bottom:8px;
+background:linear-gradient(135deg, #ffffff 0%, #4ade80 45%, #38bdf8 100%);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text;
+}
+
+/* Divider */
+.divider{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+margin:10px 0;
+}
+
+.divider .line{
+height:1px;
+width:50px;
+background:linear-gradient(90deg, transparent, rgba(74,222,128,0.4), transparent);
+}
+
+.divider .dot{
+width:6px;
+height:6px;
+background:#22c55e;
+border-radius:50%;
+box-shadow:0 0 10px #22c55e;
+}
+
+/* Tagline */
+.tagline{
+font-family:'JetBrains Mono',monospace;
+font-size:9px;
+font-weight:700;
+color:#4ade80;
+letter-spacing:2px;
+text-transform:uppercase;
+margin-bottom:14px;
+opacity:0.9;
+}
+
+/* Description */
+.sub{
+font-size:12.5px;
+color:#94a3b8;
+line-height:1.7;
+margin-bottom:20px;
+padding:0 4px;
+font-weight:500;
+}
+
+.sub strong{
+color:#4ade80;
+font-weight:700;
+}
+
+/* ============================================ */
+/* ===== SUBSCRIBE BUTTON (Fixed) ===== */
+/* ============================================ */
+
+.btn{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+width:100%;
+padding:16px 20px;
+border-radius:14px;
+margin:10px 0;
+text-decoration:none;
+font-family:'Inter',sans-serif;
+font-weight:800;
+font-size:14px;
+color:#04060d;
+letter-spacing:0.5px;
+cursor:pointer;
+border:none;
+position:relative;
+overflow:hidden;
+
+background:linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+box-shadow:
+0 10px 30px rgba(34,197,94,0.4),
+0 0 40px rgba(34,197,94,0.2),
+inset 0 0 0 1px rgba(255,255,255,0.15);
+
+transition:all 0.3s ease;
+}
+
+.btn::before{
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+transition:left 0.7s ease;
+}
+
+.btn:hover::before{
+left:100%;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:
+0 15px 45px rgba(34,197,94,0.55),
+0 0 60px rgba(34,197,94,0.3);
+}
+
+.btn:active{
+transform:translateY(0) scale(0.98);
+}
+
+.btn .tg-icon{
+width:20px;
+height:20px;
+flex-shrink:0;
+}
+
+/* ============================================ */
+/* ===== TRUST STATS ===== */
+/* ============================================ */
+
+.trust-row{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:14px;
+padding:12px 14px;
+background:rgba(34,197,94,0.05);
+border:1px solid rgba(34,197,94,0.15);
+border-radius:12px;
+margin:14px 0;
+}
+
+.trust-item{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:2px;
+flex:1;
+}
+
+.trust-num{
+font-family:'JetBrains Mono',monospace;
+font-size:15px;
+font-weight:700;
+color:#4ade80;
+line-height:1;
+}
+
+.trust-lbl{
+font-size:8px;
+font-weight:700;
+color:#64748b;
+letter-spacing:0.8px;
+text-transform:uppercase;
+margin-top:3px;
+}
+
+.trust-divider{
+width:1px;
+height:22px;
+background:linear-gradient(180deg, transparent, rgba(34,197,94,0.3), transparent);
+}
+
+/* ============================================ */
+/* ===== FEATURES ===== */
+/* ============================================ */
+
+.features{
+display:flex;
+flex-direction:column;
+gap:8px;
+margin:16px 0;
+text-align:left;
+}
+
+.feature{
+display:flex;
+align-items:center;
+gap:11px;
+padding:11px 14px;
+background:rgba(255,255,255,0.02);
+border:1px solid rgba(255,255,255,0.05);
+border-radius:11px;
+transition:all 0.25s ease;
+}
+
+.feature:hover{
+background:rgba(34,197,94,0.05);
+border-color:rgba(34,197,94,0.25);
+transform:translateX(4px);
+}
+
+.feature-check{
+width:22px;
+height:22px;
+border-radius:6px;
+background:rgba(34,197,94,0.12);
+border:1px solid rgba(34,197,94,0.3);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:11px;
+color:#4ade80;
+flex-shrink:0;
+font-weight:900;
+}
+
+.feature-text{
+font-size:12.5px;
+color:#cbd5e1;
+font-weight:500;
+letter-spacing:0.1px;
+line-height:1.35;
+}
+
+/* ============================================ */
+/* ===== URGENCY ===== */
+/* ============================================ */
+
+.urgency{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+padding:10px;
+margin-top:14px;
+background:linear-gradient(90deg, transparent, rgba(251,191,36,0.08), transparent);
+border-top:1px solid rgba(251,191,36,0.15);
+border-bottom:1px solid rgba(251,191,36,0.15);
+font-family:'JetBrains Mono',monospace;
+font-size:10px;
+font-weight:700;
+color:#fbbf24;
+letter-spacing:1.5px;
+text-transform:uppercase;
+}
+
+/* ============================================ */
+/* ===== FOOTER ===== */
+/* ============================================ */
+
+.footer{
+margin-top:18px;
+padding-top:14px;
+border-top:1px solid rgba(255,255,255,0.06);
+}
+
+.proof{
+font-size:10px;
+color:#64748b;
+letter-spacing:1.2px;
+text-transform:uppercase;
+font-family:'JetBrains Mono',monospace;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.risk{
+font-size:9.5px;
+color:#475569;
+letter-spacing:0.3px;
+line-height:1.6;
+margin-bottom:12px;
+}
+
+/* ============================================ */
+/* ===== MINI AGENCY BUTTON ===== */
+/* ============================================ */
+
+.agency-btn{
+display:inline-block;
+padding:6px 14px;
+border-radius:30px;
+text-decoration:none;
+font-family:'JetBrains Mono',monospace;
+font-size:9px;
+font-weight:600;
+color:#64748b;
+letter-spacing:0.5px;
+background:rgba(0,0,0,0.3);
+border:1px solid rgba(255,255,255,0.06);
+transition:all 0.3s ease;
+}
+
+.agency-btn:hover{
+color:#fff;
+border-color:rgba(56,189,248,0.4);
+background:rgba(56,189,248,0.06);
+}
+
+.agency-btn .brand{
+font-weight:800;
+background:linear-gradient(135deg, #38bdf8, #a855f7);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text;
+}
+
+/* ============================================ */
+/* ===== MOBILE ===== */
+/* ============================================ */
+
+@media (max-width:400px){
+.container{padding:22px 18px 18px;border-radius:20px;}
+.channel-name{font-size:15px;}
+.avatar-wrap{width:84px;height:84px;}
+.btn{font-size:13px;padding:14px 16px;}
+.feature-text{font-size:11.5px;}
+.sub{font-size:11.5px;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== BACKGROUND ===== -->
+<div class="bg-base"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+<div class="bg-grid"></div>
+
+<!-- ===== MAIN CARD ===== -->
+<div class="container">
+
+<!-- TOP BAR -->
+<div class="top-bar">
+<span class="verified-pill"><span class="check">✓</span> Verified</span>
+<span class="live-tag"><span class="live-dot"></span>LIVE</span>
+</div>
+
+<!-- AVATAR -->
+<div class="avatar-wrap">
+<img src="https://i.ibb.co/0pbGKPFw/VKy-Yp-Cxyu2aox-IALIcqut-Pv-WY-JBvk-W0-LHESw0k-LGFo1-O33z-Nm-Yu-Q92-Zc-Vy5-Aiqoxe7x-URl-Jg4-Tmsq-LCl-K4b.jpg" alt="TRADING WITH KAROL">
+</div>
+
+<!-- CHANNEL NAME -->
+<h1 class="channel-name">𝗧𝗥𝗔𝗗𝗜𝗡𝗚 𝗪𝗜𝗧𝗛 𝗞𝗔𝗥𝗢𝗟 𝐎𝐅𝐅𝐈𝐂𝐈𝐀𝐋™</h1>
+
+<!-- DIVIDER -->
+<div class="divider">
+<span class="line"></span>
+<span class="dot"></span>
+<span class="line"></span>
+</div>
+
+<!-- TAGLINE -->
+<div class="tagline">SEBI · IITIAN KAROL ®</div>
+
+<!-- DESCRIPTION -->
+<p class="sub">
+Daily <strong>Intraday Trading Signals</strong> & Market Analysis — Trusted by thousands of traders
+</p>
+
+<!-- ===== TOP BUTTON (FIXED SUBSCRIBE EVENT) ===== -->
+<a href="javascript:void(0);" class="btn" onclick="trackSubscribe();">
+<svg class="tg-icon" viewBox="0 0 24 24" fill="currentColor">
+<path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+</svg>
+<span>Join Free Telegram Channel</span>
+</a>
+
+<!-- TRUST STATS -->
+<div class="trust-row">
+<div class="trust-item">
+<span class="trust-num">5K+</span>
+<span class="trust-lbl">Traders</span>
+</div>
+<div class="trust-divider"></div>
+<div class="trust-item">
+<span class="trust-num">5-7</span>
+<span class="trust-lbl">Daily Setups</span>
+</div>
+<div class="trust-divider"></div>
+<div class="trust-item">
+<span class="trust-num">24/7</span>
+<span class="trust-lbl">Live Support</span>
+</div>
+</div>
+
+<!-- FEATURES -->
+<div class="features">
+<div class="feature">
+<span class="feature-check">✓</span>
+<span class="feature-text">High Probability Intraday Trades</span>
+</div>
+<div class="feature">
+<span class="feature-check">✓</span>
+<span class="feature-text">Exact Entry · Stop-Loss · Target</span>
+</div>
+<div class="feature">
+<span class="feature-check">✓</span>
+<span class="feature-text">Beginner Friendly Guidance</span>
+</div>
+<div class="feature">
+<span class="feature-check">✓</span>
+<span class="feature-text">Live Nifty &amp; BankNifty Updates</span>
+</div>
+</div>
+
+<!-- ===== BOTTOM BUTTON (FIXED SUBSCRIBE EVENT) ===== -->
+<a href="javascript:void(0);" class="btn" onclick="trackSubscribe();">
+<svg class="tg-icon" viewBox="0 0 24 24" fill="currentColor">
+<path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+</svg>
+<span>Join Free Telegram Channel</span>
+</a>
+
+<!-- URGENCY -->
+<div class="urgency">
+⏳ Free Access Closing Soon
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<div class="proof">📈 Limited Seats · Active Community</div>
+<p class="risk">⚠ Market investments are subject to risk</p>
+
+<!-- MINI AGENCY BUTTON -->
+<a href="https://t.me/+CKzXLc93ze44MTdl" class="agency-btn" target="_blank" rel="noopener">
+⚡ Ads by <span class="brand">@amitgrowthagency</span>
+</a>
+</div>
+
+</div>
+
+<!-- ============================================ -->
+<!-- ===== SUBSCRIBE EVENT TRACKING SCRIPT ===== -->
+<!-- ============================================ -->
+<script>
+function trackSubscribe() {
+    var telegramURL = 'https://t.me/+No9rFMGTtA40YmE9';
+    
+    // Check if fbq is loaded
+    if (typeof fbq === 'function') {
+        // Fire Subscribe event with callback
+        fbq('track', 'Subscribe', {}, {
+            eventID: 'subscribe_' + Date.now()
+        });
+        
+        // Wait 400ms for event to fire, then open Telegram
+        setTimeout(function() {
+            window.open(telegramURL, '_blank');
+        }, 400);
+    } else {
+        // Fallback: if pixel not loaded, just open link
+        window.open(telegramURL, '_blank');
+    }
+}
+</script>
+
+</body>
+</html>
